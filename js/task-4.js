@@ -9,7 +9,6 @@ form.addEventListener('submit', e => {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
-
   emailInput.classList.remove('error');
   passwordInput.classList.remove('error');
 
@@ -25,8 +24,10 @@ form.addEventListener('submit', e => {
     valid = false;
   }
 
-  if (!valid) return; 
+  if (!valid) return;
+
   const data = { email, password };
   console.log(data);
-});
 
+  form.reset(); 
+});
